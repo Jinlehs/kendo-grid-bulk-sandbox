@@ -23,6 +23,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -90,9 +93,105 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
               "src/styles.css"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "@framewerx/forms": {
+      "projectType": "library",
+      "root": "projects/framewerx/forms",
+      "sourceRoot": "projects/framewerx/forms/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/framewerx/forms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/framewerx/forms/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/framewerx/forms/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/framewerx/forms/src/test.ts",
+            "tsConfig": "projects/framewerx/forms/tsconfig.spec.json",
+            "karmaConfig": "projects/framewerx/forms/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@framewerx/core": {
+      "projectType": "library",
+      "root": "projects/framewerx/core",
+      "sourceRoot": "projects/framewerx/core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/framewerx/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/framewerx/core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/framewerx/core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/framewerx/core/src/test.ts",
+            "tsConfig": "projects/framewerx/core/tsconfig.spec.json",
+            "karmaConfig": "projects/framewerx/core/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@framewerx/kendo-angular-grid": {
+      "projectType": "library",
+      "root": "projects/framewerx/kendo-angular-grid",
+      "sourceRoot": "projects/framewerx/kendo-angular-grid/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/framewerx/kendo-angular-grid/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/framewerx/kendo-angular-grid/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/framewerx/kendo-angular-grid/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/framewerx/kendo-angular-grid/src/test.ts",
+            "tsConfig": "projects/framewerx/kendo-angular-grid/tsconfig.spec.json",
+            "karmaConfig": "projects/framewerx/kendo-angular-grid/karma.conf.js"
           }
         }
       }

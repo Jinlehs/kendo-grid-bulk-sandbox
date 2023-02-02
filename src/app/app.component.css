@@ -1,0 +1,6 @@
+
+.k-grid tr.selected {
+  background-color: #41f4df;
+  pointer-events: none;
+  opacity: 0.5;
+}

@@ -2,6 +2,18 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@framewerx/core": [
+        "dist/framewerx/core"
+      ],
+      "@framewerx/forms": [
+        "dist/framewerx/forms"
+      ],
+      "@framewerx/kendo-angular-grid": [
+        "dist/framewerx/kendo-angular-grid"
+      ]
+    },
+    "strictPropertyInitialization": false,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
