@@ -26,6 +26,7 @@
     "@progress/kendo-angular-dropdowns": "^7.0.0",
     "@progress/kendo-angular-excel-export": "^5.0.0",
     "@progress/kendo-angular-grid": "^7.4.2",
+    "@progress/kendo-angular-progressbar": "^11.0.0",
     "@progress/kendo-angular-inputs": "9 - 10",
     "@progress/kendo-angular-intl": "^4.0.0",
     "@progress/kendo-angular-l10n": "^4.0.0",

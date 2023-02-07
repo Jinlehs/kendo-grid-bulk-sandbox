@@ -26,6 +26,8 @@ export class AppComponent {
   public selectedRows: any[] = [];
   public formGroup: FormGroup;
   private editedRowIndex: number;
+  public value = 0;
+  public running: number;
 
   constructor() {
     this.setSelectableSettings();
@@ -132,6 +134,27 @@ export class AppComponent {
     args.sender.editRow(args.rowIndex, this.formGroup);
   }
 
+  public startProgress(): void {
+    this.running = window.setInterval(() => {
+      if (this.value <= 100) {
+        this.value++;
+      } else {
+        this.stopProgress();
+      }
+    }, 50);
+  }
+
+  public stopProgress(): void {
+    if (this.running) {
+      clearInterval(this.running);
+      this.running = 0;
+    }
+  }
+
+  public resetProgress(): void {
+    this.value = 0;
+    this.stopProgress();
+  }
 
 
 
