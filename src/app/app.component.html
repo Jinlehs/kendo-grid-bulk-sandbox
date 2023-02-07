@@ -58,7 +58,6 @@
     kendoButton
     themeColor="primary"
     [disabled]="!!running || value >= 100"
-    (click)="startProgress()"
   >
     {{ value ? "Resume" : "Start" }}
   </button>

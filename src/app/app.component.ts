@@ -48,10 +48,15 @@ export class AppComponent {
 
     dataItem.Selected = 'true';
 
-    setTimeout(() => {
-      dataItem.Selected = 'false';
-    }, 3000);
-    console.log("disablerow-called")
+    this.running = window.setInterval(() => {
+      if (this.value <= 100) {
+        this.value++;
+      } else {
+        this.stopProgress();
+        dataItem.Selected = 'false';
+        this.resetProgress();
+      }
+    }, 50);
   }
 
   public setSelectableSettings(): void {
