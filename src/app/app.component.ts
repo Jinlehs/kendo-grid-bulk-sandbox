@@ -9,6 +9,7 @@ import {
   SelectionEvent, EditEvent, GridComponent, CancelEvent, SaveEvent
 } from "@progress/kendo-angular-grid";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {LabelSettings} from "@progress/kendo-angular-progressbar";
 
 
 @Component({
@@ -33,6 +34,12 @@ export class AppComponent {
     this.setSelectableSettings();
   }
 
+  public label: LabelSettings = {
+    visible: false,
+    format: "percent",
+    position: "start",
+  };
+
   public rowCallback(context: RowClassArgs){
 
     const isEven = context.index % 2 === 0;
@@ -56,7 +63,7 @@ export class AppComponent {
         dataItem.Selected = 'false';
         this.resetProgress();
       }
-    }, 50);
+    }, 10);
   }
 
   public setSelectableSettings(): void {

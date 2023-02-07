@@ -4,3 +4,8 @@
   pointer-events: none;
   opacity: 0.5;
 }
+
+kendo-progressbar {
+  width: 400px !important;
+  height: 15px !important;
+}
